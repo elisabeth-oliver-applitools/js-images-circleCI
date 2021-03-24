@@ -1,4 +1,4 @@
-# Applitools Tutorial - Cypress
+# Applitools Tutorial - Images
 
 ## Pre-requisites:
 1. Install Node.js from [here](https://nodejs.org/en/)
