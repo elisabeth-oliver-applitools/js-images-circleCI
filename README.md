@@ -1,4 +1,4 @@
-# Applitools Tutorial - Images
+# Applitools Tutorial - Images in JavaScript
 
 ## Pre-requisites:
 1. Install Node.js from [here](https://nodejs.org/en/)
