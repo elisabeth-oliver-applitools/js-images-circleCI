@@ -1,23 +1,35 @@
-# Pre-requisites:
+# Applitools Tutorial - Cypress
 
-Install Node.js from [here](https://nodejs.org/en/)
+## Pre-requisites:
+1. Install Node.js from [here](https://nodejs.org/en/)
 
-# Steps to run this example
-
-### Running the example:
-
+## Run the Example Project
 1. Download the example
     * Option 1: `git clone https://github.com/applitools/tutorial-images-javascript.git`
     * Option 2: Download it as a Zip file and extract it
 2. CD into the `tutorial-images-javascript` folder
-3. Change the `APPLITOOLS_API_KEY` with your own.
+3. Set up environment variable `APPLITOOLS_API_KEY` with your own API key.
     * Login to Applitools > Click on the Person icon > My API Key
+    * Linux/Mac: export APPLITOOLS_API_KEY=<your_key>
+    * Windows: set APPLITOOLS_API_KEY=<your_key>
 4. run `npm install`
 5. run `npm test`
 
-### Adding to an existing Node.js example
 
-```sh
-npm install "@applitools/eyes-images" --save-dev
+## Add Applitools Eyes to an Existing Node.js Project
+
+Install the Applitools Eyes Images SDK:
 
 ```
+npm install @applitools/eyes-images --save-dev
+```
+
+Follow along with the example in this repository for adding Applitools Eyes along with your existing tests.
+
+## Eyes Images SDK tutorial
+
+Find the tutorial at: https://applitools.com/tutorials/screenshots-javascript.html
+
+## More Information
+* https://www.npmjs.com/package/@applitools/eyes-images
+* https://applitools.com/docs/api/eyes-sdk/index-gen/classindex-images-javascript.html
