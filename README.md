@@ -1,7 +1,7 @@
 # Applitools Tutorial - Images in JavaScript
 
-## Pre-requisites:
-1. Install Node.js from [here](https://nodejs.org/en/)
+## Pre-Requisites
+* Install Node.js from [here](https://nodejs.org/en/)
 
 ## Run the Example Project
 1. Download the example
@@ -25,6 +25,12 @@ npm install @applitools/eyes-images --save-dev
 ```
 
 Follow along with the example in this repository for adding Applitools Eyes along with your existing tests.
+
+## GitHub Action CI/CD Example
+
+This repository includes an example of how you can integrate Applitools Eyes into your CI/CD process whether with GitHub Actions or a variety of other tools:
+
+https://github.com/applitools/tutorial-images-javascript/blob/main/.github/workflows/test.yml
 
 ## Eyes Images SDK tutorial
 
