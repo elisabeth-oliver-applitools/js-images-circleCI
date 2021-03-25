@@ -32,4 +32,4 @@ jobs:
         with:
           delete-branch: true
           token: ${{ secrets.APPLITOOLSUPDATEBOT_TOKEN }}
-          push-to-fork: machine-user/fork-of-repository
+          push-to-fork: applitoolsupdatebot/tutorial-images-javascript
