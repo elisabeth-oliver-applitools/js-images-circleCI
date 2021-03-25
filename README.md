@@ -1,5 +1,7 @@
 # Applitools Tutorial - Images in JavaScript
 
+Get started with automated visual testing using the Applitool Eyes Images SDK.
+
 ## Pre-Requisites
 * Install Node.js from [here](https://nodejs.org/en/)
 
