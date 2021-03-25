@@ -34,6 +34,7 @@ jobs:
       - uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'main'
       
 #       - name: Create Pull Request with Updates
 #         uses: peter-evans/create-pull-request@v3
