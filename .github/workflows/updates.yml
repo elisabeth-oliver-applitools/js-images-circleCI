@@ -31,3 +31,5 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           delete-branch: true
+          token: ${{ secrets.APPLITOOLSUPDATEBOT_TOKEN }}
+          push-to-fork: machine-user/fork-of-repository
