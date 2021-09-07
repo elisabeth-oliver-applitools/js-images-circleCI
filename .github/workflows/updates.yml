@@ -26,6 +26,9 @@ jobs:
     
       - name: Install Updates
         run: npm install
+        
+      - name: Revert node-fetch to 2.X
+        run: npm install node-fetch@2
       
       - run: npm test
         env: 
