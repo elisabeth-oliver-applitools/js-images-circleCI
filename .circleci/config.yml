@@ -7,6 +7,8 @@ jobs:
 
     steps:
       - checkout:
-      - run: export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` >> $BASH_ENV
       - run: printenv
-      - run: echo ${APPLITOOLS_BATCH_ID}
+      - run:
+          command: | 
+            export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` >> $BASH_ENV 
+            echo ${APPLITOOLS_BATCH_ID}
