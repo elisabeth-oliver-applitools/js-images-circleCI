@@ -9,6 +9,9 @@ jobs:
       - checkout:
       - run: printenv
       - run:
+          name: Prepare for commit push
+          command: curl -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=$APPLITOOLS_API_KEY&CommitSha=$CIRCLE_SHA1&BranchName=$CIRCLE_BRANCH"
+      - run:
           name: Set enviropnment variable and run test
           command: | 
             export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1` >> $BASH_ENV 
