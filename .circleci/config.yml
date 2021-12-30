@@ -12,7 +12,8 @@ jobs:
           name: Prepare for commit push
           command: |
             export APPLITOOLS_PARENT_BRANCH=main >> $BASH_ENV
-            curl -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=$APPLITOOLS_API_KEY&CommitSha=$CIRCLE_SHA1&BranchName=$CIRCLE_BRANCH"
+            echo $APPLITOOLS_PARENT_BRANCH
+            curl -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=$APPLITOOLS_API_KEY&CommitSha=$CIRCLE_SHA1&BranchName=$CIRCLE_BRANCH&ParentBranchName=$APPLITOOLS_PARENT_BRANCH"
       - run:
           name: Set enviropnment variable and run test
           command: | 
