@@ -14,3 +14,4 @@ Learn more about Applitools [Eyes](https://info.applitools.com/ucY77) and the [U
 More about the Eyes Images SDK:
 * https://www.npmjs.com/package/@applitools/eyes-images
 * https://applitools.com/docs/api/eyes-sdk/index-gen/classindex-images-javascript.html
+ 
