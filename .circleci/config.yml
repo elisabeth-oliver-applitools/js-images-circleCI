@@ -2,9 +2,11 @@ jobs:
   build:
     docker:
       - image: circleci/node:16.13.1
+      
     working_directory: ~/repo
+    
     steps:
-      - checkout
+      - checkout:
       - run: printenv
       - restore_cache:
           keys:
