@@ -29,6 +29,9 @@ jobs:
         
       - name: Revert node-fetch to 2.X
         run: npm install node-fetch@2
+        
+      - name: Print environment variables
+        run: printenv
       
       - run: npm test
         env: 
