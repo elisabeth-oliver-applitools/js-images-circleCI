@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Prepare for commit push - Temporarily not needed; only want integration on PR
           command: |
-            export APPLITOOLS_PARENT_BRANCH=main
+            export APPLITOOLS_PARENT_BRANCH="Plakhota/js-images-circleCI/main"
             echo $APPLITOOLS_PARENT_BRANCH
             echo $APPLITOOLS_API_KEY
             echo $CIRCLE_BRANCH
@@ -27,4 +27,22 @@ jobs:
             echo ${APPLITOOLS_BRANCH_NAME}
             echo ${APPLITOOLS_BATCH_ID}
             npm test
+      
+      - run: 
+          name: If associated with PR
+          command: |
+            if [ -n "$CIRCLE_PULL_REQUEST" ]; then
+              echo "This is part of a PR!"            
+              curl -X POST -H "Content-Type: string" \
+                -d '{
+                    “SourceBranch”: “${APPLITOOLS_BRANCH_NAME}”, // Current Branch name -> wix/react-native-calendars/infra/Docs_site
+                    “TargetBranch”: “$APPLITOOLS_PARENT_BRANCH”, // Parent Branch Name -> wix/react-native-calendars/master
+                    “OnlyCheck”: false,
+                    “Context”: “string”
+                     }' \
+                   https://eyesapi.applitools.com/api/Baselines/branches/merge?apiKey=${APPLITOOLS_API_KEY}
+              
+            else
+              echo "This isn't part of a PR!"
+            fi
             
