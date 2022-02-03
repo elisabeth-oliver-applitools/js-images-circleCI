@@ -16,3 +16,4 @@ More about the Eyes Images SDK:
 * https://applitools.com/docs/api/eyes-sdk/index-gen/classindex-images-javascript.html
  
   
+ 
