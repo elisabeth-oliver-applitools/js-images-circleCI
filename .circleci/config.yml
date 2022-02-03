@@ -24,5 +24,5 @@ jobs:
           command: | 
             export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
             echo ${APPLITOOLS_BATCH_ID}
-            APPLITOOLS_BRANCH_NAME=${APPLITOOLS_BRANCH_NAME} npm test
+            APPLITOOLS_BRANCH_NAME=${APPLITOOLS_BRANCH_NAME} APPLITOOLS_BATCH_ID=${CIRCLE_SHA1} npm test
             
