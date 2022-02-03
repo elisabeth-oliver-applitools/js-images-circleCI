@@ -23,6 +23,8 @@ jobs:
           name: Set environnment variable and run test
           command: | 
             export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
+            export APPLITOOLS_BRANCH_NAME="Plakhota/js-images-circleCI/"${CIRCLE_BRANCH}
+            echo ${APPLITOOLS_BRANCH_NAME}
             echo ${APPLITOOLS_BATCH_ID}
-            APPLITOOLS_BRANCH_NAME=${APPLITOOLS_BRANCH_NAME} APPLITOOLS_BATCH_ID=${CIRCLE_SHA1} npm test
+            npm test
             
