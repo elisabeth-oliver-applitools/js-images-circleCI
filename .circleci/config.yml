@@ -22,7 +22,6 @@ jobs:
       - run:
           name: Set environnment variable and run test
           command: | 
-            export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
             echo ${APPLITOOLS_BATCH_ID}
-            npm test
+            APPLITOOLS_BATCH_ID=${CIRCLE_SHA1} npm test
             
