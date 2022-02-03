@@ -6,42 +6,27 @@ jobs:
     working_directory: ~/repo
     
     steps:
-     # - checkout:
       - run: printenv
       - run:
           command: npm install
       - run:
           name: Prepare for commit push - Temporarily not needed; only want integration on PR
           command: |
-           # export APPLITOOLS_PARENT_BRANCH="Plakhota/js-images-circleCI/main"
-            echo $APPLITOOLS_PARENT_BRANCH
             echo $APPLITOOLS_API_KEY
             echo $CIRCLE_BRANCH
-           # export APPLITOOLS_BRANCH_NAME="Plakhota/js-images-circleCI/"${CIRCLE_BRANCH}
-            #curl -L -d '' -X POST "eyesapi.applitools.com/api/externals/github/push?apiKey=$APPLITOOLS_API_KEY&CommitSha=$CIRCLE_SHA1&BranchName=$CIRCLE_BRANCH&ParentBranchName=$APPLITOOLS_PARENT_BRANCH"
       - run:
           name: Set environnment variable and run test
           command: | 
             export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
-            echo ${APPLITOOLS_BRANCH_NAME}
             echo ${APPLITOOLS_BATCH_ID}
             npm test
       
-    #  - run: 
-     #     name: If associated with PR
-      #    command: |
-       #     if [ -n "$CIRCLE_PULL_REQUEST" ]; then
-        #      echo "This is part of a PR!"            
-         #     curl -X POST -H "Content-Type: string" \
-          #      -d '{
-           #         “SourceBranch”: “${APPLITOOLS_BRANCH_NAME}”, // Current Branch name -> wix/react-native-calendars/infra/Docs_site
-            #        “TargetBranch”: “$APPLITOOLS_PARENT_BRANCH”, // Parent Branch Name -> wix/react-native-calendars/master
-             #       “OnlyCheck”: false,
-              #      “Context”: “string”
-               #      }' \
-                #   https://eyesapi.applitools.com/api/Baselines/branches/merge?apiKey=${APPLITOOLS_API_KEY}
-              
-         #   else
-          #    echo "This isn't part of a PR!"
-           # fi
+      - run: 
+          name: If associated with PR
+          command: |
+            if [ -n "$CIRCLE_PULL_REQUEST" ]; then
+              echo "This is part of a PR!" 
+            else
+              echo "This isn't part of a PR!"
+            fi
             
