@@ -26,7 +26,7 @@ jobs:
             else
               echo "Is a PR, expect Branch and Parent Branch set by the Github integration app"
             fi
-            export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}"-suffix"
+            export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
             echo ${APPLITOOLS_BATCH_ID}
             echo ${APPLITOOLS_BRANCH_NAME}
             npm test
