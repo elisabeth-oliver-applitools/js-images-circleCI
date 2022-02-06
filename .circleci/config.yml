@@ -19,7 +19,14 @@ jobs:
       - run:
           name: Set environnment variable and run test
           command: | 
+            if [[ -z "${CIRCLE_PULL_REQUEST}" ]]; then
+              echo "Not a PR, add an APPLITOOLS_BRANCH_NAME"
+              export APPLITOOLS_BRANCH_NAME="Plakhota/js-images-circleCI/"$CIRCLE_BRANCH
+            else
+              echo "Is a PR, expect Branch and Parent Branch set by the Github integration app"
+            fi
             export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
             echo ${APPLITOOLS_BATCH_ID}
+            echo ${APPLITOOLS_BRANCH_NAME}
             npm test
             
