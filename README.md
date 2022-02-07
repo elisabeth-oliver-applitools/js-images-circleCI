@@ -6,7 +6,7 @@ Learn more about how to install and start this project with our [JavaScript Imag
 
 <https://applitools.com/tutorials/screenshots-javascript.html>
 
-
+ 
 ## More Information
 
 Learn more about Applitools [Eyes](https://info.applitools.com/ucY77) and the [Ultrafast Test Cloud](https://info.applitools.com/ucY78) at [applitools.com](https://info.applitools.com/ucY76).
