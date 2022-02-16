@@ -29,5 +29,5 @@ jobs:
             export APPLITOOLS_BATCH_ID=${CIRCLE_SHA1}
             echo ${APPLITOOLS_BATCH_ID}
             echo ${APPLITOOLS_BRANCH_NAME}
-            npm test
+            APPLITOOLS_DONT_CLOSE_BATCHES=true npm test
             
