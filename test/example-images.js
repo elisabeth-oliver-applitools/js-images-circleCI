@@ -17,7 +17,9 @@ describe('Eyes-Images', () => {
         // configuration.setApiKey('APPLITOOLS_API_KEY')
 
         // Set new batch
-        configuration.setBatch(new BatchInfo('Demo batch'))
+        configuration.setBatch(new BatchInfo('Demo batch'));
+        configuration.setDontCloseBatches(true);
+
 
         // Set the configuration to eyes
         eyes.setConfiguration(configuration);
