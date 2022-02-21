@@ -5,7 +5,7 @@ Get started with Applitools Eyes automated visual testing with this example usin
 Learn more about how to install and start this project with our [JavaScript Images tutorial](https://applitools.com/tutorials/screenshots-javascript.html)!
 
 <https://applitools.com/tutorials/screenshots-javascript.html>
-
+ 
  
 ## More Information
 
