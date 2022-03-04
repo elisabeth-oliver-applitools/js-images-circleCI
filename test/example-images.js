@@ -17,7 +17,7 @@ describe('Eyes-Images', () => {
         // configuration.setApiKey('APPLITOOLS_API_KEY')
 
         // Set new batch
-        configuration.setBatch(new BatchInfo('Demo batch'));
+        configuration.setBatch(new BatchInfo('Demo batch pr'));
         configuration.setDontCloseBatches(true);
 
 
@@ -26,6 +26,7 @@ describe('Eyes-Images', () => {
     })
 
 // not a change really, but we need to trigger a pr so...
+// again, need a dif.
 
     it('Images test', async () => {
         await eyes.open('Applitools site', 'Screenshot test!', {width: 800, height: 600})
