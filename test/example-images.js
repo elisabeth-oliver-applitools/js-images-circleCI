@@ -25,6 +25,8 @@ describe('Eyes-Images', () => {
         eyes.setConfiguration(configuration);
     })
 
+// not a change really, but we need to trigger a pr so...
+
     it('Images test', async () => {
         await eyes.open('Applitools site', 'Screenshot test!', {width: 800, height: 600})
 
